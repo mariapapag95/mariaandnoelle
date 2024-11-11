@@ -182,6 +182,11 @@
       filter: invert();
     }
 
+    .hotel-section-title {
+      text-align: right;
+      margin-right: 2rem
+    }
+
     .hotel-container {
       display: flex;
       align-items: flex-start;
@@ -213,8 +218,17 @@
 
     /* Add this media query for small screens */
     @media (max-width: 600px) {
+      .red-container img {
+        width: 100%;
+      }
+
       .button-container {
         flex-direction: column;
+      }
+
+      .hotel-section-title {
+        text-align: left;
+        margin-right: 0;
       }
 
       .hotel-container img {
@@ -296,7 +310,7 @@
       <div id="hotels">
         <div class="spacer"></div>
         <!-- Hotel section title -->
-        <div style="text-align: right; margin-right: 2rem">
+        <div class="hotel-section-title">
           <h2>Spending the night?</h2>
           <p>We are not blocking rooms at any specific hotel. Below are some options in the area. Please do not feel
             limited to these options ❤</p>
@@ -337,8 +351,7 @@
           </div>
           <!-- Hotel 3 -->
           <div class="hotel-container">
-            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/logan.jpg"
-              alt="The Logan" />
+            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/logan.jpg" alt="The Logan" />
             <div class="hotel-text" style="flex: 1">
               <h3>The Logan Philadelphia</h3>
               <p>
