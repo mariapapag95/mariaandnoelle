@@ -213,8 +213,12 @@
 
     /* Add this media query for small screens */
     @media (max-width: 600px) {
+      .button-container {
+        flex-direction: column;
+      }
+
       .hotel-container img {
-        width: 95vw;
+        width: 100%;
         margin: 0;
         padding: 0;
       }
