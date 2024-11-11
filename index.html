@@ -26,6 +26,7 @@
     body {
       font-family: "Raleway", sans-serif;
       padding: 0;
+      margin: 0;
     }
 
     h2 {
@@ -38,6 +39,10 @@
 
     a {
       text-decoration: none;
+    }
+
+    .spacer {
+      height: clamp(1rem, 4vw, 15rem);
     }
 
     .button:hover {
@@ -118,6 +123,10 @@
       color: white;
     }
 
+    .black-container img {
+      filter: invert();
+    }
+
     .hotel-container {
       display: flex;
       align-items: flex-start;
@@ -137,6 +146,13 @@
     .hotel-text {
       margin: 0 0 1rem 0;
       text-align: left;
+    }
+
+    .more-info-section {
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      padding-bottom: 5rem;
     }
 
     /* Add this media query for small screens */
@@ -164,7 +180,8 @@
   <div class="red-container">
     <div class="gothic-font title">Maria & Noelle</div>
     <div class="script-font subtitle">are getting married!</div>
-    <img class="cupid-image" src="images/cupid.svg" alt="Cupid image" />
+    <div class="spacer"></div>
+    <img src="images/cupid.svg" alt="Cupid image" />
     <div class="gothic-font date-row">02
       <div class="date-row-heart" style="padding: 1rem;">
         ♥
@@ -173,7 +190,7 @@
         ♥
       </div> 25
     </div>
-
+    <div class="spacer"></div>
     <div>
       <!-- Centered Buttons Row -->
       <div class="button-container">
@@ -188,11 +205,11 @@
           Registry
         </a>
         <!-- Attire Button -->
-        <a class="button" href="#">
+        <a class="button" href="https://pin.it/1Ek8ws31D">
           Attire
         </a>
         <!-- Info Button -->
-        <a class="button" href="#">
+        <a class="button" href="#more-info">
           More Info
         </a>
       </div>
@@ -204,7 +221,7 @@
   <div class="black-container">
     <!-- Hotels Section -->
     <div id="hotels">
-      <div style="height: 2rem"></div>
+      <div class="spacer"></div>
       <!-- Hotel section title -->
       <h2 style="text-align: right; margin-right: 2rem">
         Spending the night?
@@ -292,7 +309,16 @@
       </div>
       <!-- End hotels section -->
     </div>
-    <!-- End black container -->
+    <!-- More info section -->
+    <div id='more-info' class="more-info-section">
+      <img src="images/rose.svg" alt="Rose image" />
+      <div class="gothic-font" style="font-size: 4rem">
+        More info coming soon...
+      </div>
+      <!-- End more info section -->
+    </div>
+  </div>
+  <!-- End black container -->
 </body>
 
 </html>
