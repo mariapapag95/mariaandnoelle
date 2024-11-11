@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+
+  function checkPassword() {
+    const inputPassword = document.getElementById("password-input").value;
+    const correctPasswords = ["palumbo", "margatina", "papageorgiou"]; // Set your password here
+
+    if (correctPasswords.includes(inputPassword)) {
+      // If the password is correct, hide the overlay and show the content
+      document.getElementById("password-overlay").style.display = "none";
+      document.getElementById("main-content").style.display = "block";
+    } else {
+      // If incorrect, show an error message
+      document.getElementById("error-message").style.display = "block";
+    }
+  }
+
+</script>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,13 +59,27 @@
       text-decoration: none;
     }
 
-    .spacer {
-      height: clamp(1rem, 4vw, 15rem);
+    .password-overlay {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      color: white;
     }
 
-    .button:hover {
-      color: rgb(255, 210, 225);
-      border: 2px solid rgb(255, 210, 225);
+    .password-input-field {
+      padding: 0.5rem 1.5rem;
+      margin: 3rem 0;
+      border: 2px solid black;
+      border-radius: 8px;
+      font-family: "Raleway";
+      text-align: center;
+      color: black;
+    }
+
+    .spacer {
+      height: clamp(1rem, 4vw, 15rem);
     }
 
     .gothic-font {
@@ -111,6 +143,32 @@
       border-radius: 8px;
       font-family: "Raleway";
       text-align: center;
+    }
+
+    .button:hover {
+      color: rgb(255, 210, 225);
+      border: 2px solid rgb(255, 210, 225);
+    }
+
+    .submit-button {
+      filter: invert();
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 0.5rem 2rem;
+      margin: 0.5rem;
+      background-color: transparent;
+      color: black;
+      border: 2px solid black;
+      border-radius: 8px;
+      font-family: "Raleway";
+      text-align: center;
+    }
+
+    .submit-button:hover {
+      color: rgb(255, 210, 225);
+      border: 2px solid rgb(255, 210, 225);
     }
 
     .black-container {
@@ -178,149 +236,163 @@
 </head>
 
 <body>
-  <div class="red-container">
-    <div class="gothic-font title">Maria & Noelle</div>
-    <div class="script-font subtitle">are getting married!</div>
-    <div class="spacer"></div>
-    <img src="images/cupid.svg" alt="Cupid image" />
-    <div class="gothic-font date-row">02
-      <div class="date-row-heart" style="padding: 1rem;">
-        ♥
-      </div> 16
-      <div class="date-row-heart" style="padding: 1rem;">
-        ♥
-      </div> 25
-    </div>
-    <div class="spacer"></div>
-    <div>
-      <!-- Centered Buttons Row -->
-      <div class="button-container">
-        <!-- RSVP Button -->
-        <a class="button" href="https://forms.gle/SAfHu1Qqg6Wrc9Y59"> RSVP </a>
-        <!-- Hotels Button -->
-        <a class="button" href="#hotels">
-          Hotels
-        </a>
-        <!-- Registry Button -->
-        <a class="button" href="https://registry.theknot.com/noelle-palumbo-maria-margatina-february-2025-pa/69052898">
-          Registry
-        </a>
-        <!-- Attire Button -->
-        <a class="button" href="https://pin.it/1Ek8ws31D">
-          Attire
-        </a>
-        <!-- Info Button -->
-        <a class="button" href="#more-info">
-          More Info
-        </a>
-      </div>
-      <!-- End button container -->
-    </div>
-  </div>
-  <!-- End red-container -->
+  <div id="password-overlay" class="password-overlay">
+    <div style="text-align: center; display:flex; flex-direction: column;">
+      <div style="font-size: 3rem;">Enter Password</div>
+      <input class="password-input-field" id="password-input" placeholder="Noelle or Maria's last name" />
 
-  <div class="black-container">
-    <!-- Hotels Section -->
-    <div id="hotels">
-      <div class="spacer"></div>
-      <!-- Hotel section title -->
-      <h2 style="text-align: right; margin-right: 2rem">
-        Spending the night?
-      </h2>
-      <!-- Hotel 1 -->
-      <div class="hotel-container">
-        <img src="images/divine-lorraine.png" alt="Mint House at the Lorraine" />
-        <div class="hotel-text" style="flex: 1">
-          <h3> Mint House at the Lorraine</h3>
-          <p>
-            Mint House at the Lorraine offers fully furnished apartments with
-            modern amenities, perfect for both short and extended stays.
-            Located near cultural attractions, guests enjoy a home-like
-            atmosphere with easy access to the city.
-          </p>
-          <div class="hotel-link"><a href="https://www.minthouse.com/properties/loraine-philadelphia">Book on website
-              ❤</a>
-          </div>
-        </div>
-      </div>
-      <!-- Hotel 2 -->
-      <div class="hotel-container">
-        <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/fishtown-1.jpg?w=1024"
-          alt="Fishtown Hotel" />
-        <div class="hotel-text" style="flex: 1;">
-          <h3>Fishtown Hotel</h3>
-          <p>
-            Fishtown Hotel provides a unique and vibrant stay in one of
-            Philadelphia's trendiest neighborhoods. Enjoy stylish
-            accommodations, local eateries, and easy access to arts and music
-            venues.
-          </p>
-          <div class="hotel-link"> <a href="https://www.fishtownhotel.com">Book on website ❤</a>
-          </div>
-        </div>
-        <!-- Hotel 3 -->
-        <div class="hotel-container">
-          <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/logan.jpg?w=670" alt="The Logan" />
-          <div class="hotel-text" style="flex: 1">
-            <h3>The Logan Philadelphia</h3>
-            <p>
-              The Logan Philadelphia offers a blend of historic charm and modern
-              luxury. Located just a short distance from Broad Street, it
-              features spacious rooms, an on-site restaurant, and a rooftop bar
-              with stunning city views.</p>
-            <div class="hotel-link"><a href="https://www.theloganhotel.com">Book on website ❤</a></div>
-          </div>
-        </div>
-        <!-- Hotel 4 -->
-        <div class="hotel-container">
-          <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/kimpton-2.jpg?w=1024"
-            alt="Kimpton Hotel Palomar" />
-          <div class="hotel-text" style="flex: 1">
-            <h3>Kimpton Hotel Palomar</h3>
-            <p>
-              The Kimpton Hotel Palomar is a boutique hotel known for its
-              stylish design and eco-friendly practices. Enjoy modern rooms, a
-              rooftop pool, and easy access to downtown attractions.
-            </p>
-            <div class="hotel-link"><a href="https://www.kimptonhotels.com">Book on website ❤</a>
-            </div>
-          </div>
-        </div>
-        <!-- Hotel 5 -->
-        <div class="hotel-container">
-          <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/hilton-1.jpg?w=1024"
-            alt="Hilton Philadelphia" />
-          <div class="hotel-text" style="flex: 1">
-            <h3>
-              Hilton Philadelphia at Penn's Landing
-            </h3>
-            <p>
-              Situated along the waterfront, Hilton Philadelphia at Penn's
-              Landing provides stunning views of the Delaware River and the city
-              skyline. Guests can enjoy comfortable accommodations and easy
-              access to historical sites.
-            </p>
-            <div class="hotel-link"> <a
-                href="https://www.hilton.com/en/hotels/phlplhh-hilton-philadelphia-at-penns-landing">Book on
-                website ❤</a>
-            </div>
-          </div>
-        </div>
-        <!-- End hotel 5 section  -->
-      </div>
-      <!-- End hotels section -->
-    </div>
-    <!-- More info section -->
-    <div id='more-info' class="more-info-section">
-      <img style="max-width: 25rem;" src="images/rose.svg" alt="Rose image" />
-      <div class="spacer"></div>
-      <div class="gothic-font" style="font-size: 4rem">
-        More info coming soon...
-      </div>
-      <!-- End more info section -->
+      <button class="submit-button" onclick="checkPassword()">Submit</button>
+      <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
     </div>
   </div>
-  <!-- End black container -->
+
+  <div id="main-content" style="display: none;">
+    <div class="red-container">
+      <div class="gothic-font title">Maria & Noelle</div>
+      <div class="script-font subtitle">are getting married!</div>
+      <div class="spacer"></div>
+      <img src="images/cupid.svg" alt="Cupid image" />
+      <div class="gothic-font date-row">02
+        <div class="date-row-heart" style="padding: 1rem;">
+          ♥
+        </div> 16
+        <div class="date-row-heart" style="padding: 1rem;">
+          ♥
+        </div> 25
+      </div>
+      <div class="spacer"></div>
+      <div>
+        <!-- Centered Buttons Row -->
+        <div class="button-container">
+          <!-- RSVP Button -->
+          <a class="button" href="https://forms.gle/SAfHu1Qqg6Wrc9Y59"> RSVP </a>
+          <!-- Hotels Button -->
+          <a class="button" href="#hotels">
+            Hotels
+          </a>
+          <!-- Registry Button -->
+          <a class="button"
+            href="https://registry.theknot.com/noelle-palumbo-maria-margatina-february-2025-pa/69052898">
+            Registry
+          </a>
+          <!-- Attire Button -->
+          <a class="button" href="https://pin.it/1Ek8ws31D">
+            Attire
+          </a>
+          <!-- Info Button -->
+          <a class="button" href="#more-info">
+            More Info
+          </a>
+        </div>
+        <!-- End button container -->
+      </div>
+    </div>
+    <!-- End red-container -->
+
+    <div class="black-container">
+      <!-- Hotels Section -->
+      <div id="hotels">
+        <div class="spacer"></div>
+        <!-- Hotel section title -->
+        <h2 style="text-align: right; margin-right: 2rem">
+          Spending the night?
+        </h2>
+        <!-- Hotel 1 -->
+        <div class="hotel-container">
+          <img src="images/divine-lorraine.png" alt="Mint House at the Lorraine" />
+          <div class="hotel-text" style="flex: 1">
+            <h3> Mint House at the Lorraine</h3>
+            <p>
+              Mint House at the Lorraine offers fully furnished apartments with
+              modern amenities, perfect for both short and extended stays.
+              Located near cultural attractions, guests enjoy a home-like
+              atmosphere with easy access to the city.
+            </p>
+            <div class="hotel-link"><a href="https://www.minthouse.com/properties/loraine-philadelphia">Book on website
+                ❤</a>
+            </div>
+          </div>
+        </div>
+        <!-- Hotel 2 -->
+        <div class="hotel-container">
+          <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/fishtown-1.jpg?w=1024"
+            alt="Fishtown Hotel" />
+          <div class="hotel-text" style="flex: 1;">
+            <h3>Fishtown Hotel</h3>
+            <p>
+              Fishtown Hotel provides a unique and vibrant stay in one of
+              Philadelphia's trendiest neighborhoods. Enjoy stylish
+              accommodations, local eateries, and easy access to arts and music
+              venues.
+            </p>
+            <div class="hotel-link"> <a href="https://www.fishtownhotel.com">Book on website ❤</a>
+            </div>
+          </div>
+          <!-- Hotel 3 -->
+          <div class="hotel-container">
+            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/logan.jpg?w=670"
+              alt="The Logan" />
+            <div class="hotel-text" style="flex: 1">
+              <h3>The Logan Philadelphia</h3>
+              <p>
+                The Logan Philadelphia offers a blend of historic charm and modern
+                luxury. Located just a short distance from Broad Street, it
+                features spacious rooms, an on-site restaurant, and a rooftop bar
+                with stunning city views.</p>
+              <div class="hotel-link"><a href="https://www.theloganhotel.com">Book on website ❤</a></div>
+            </div>
+          </div>
+          <!-- Hotel 4 -->
+          <div class="hotel-container">
+            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/kimpton-2.jpg?w=1024"
+              alt="Kimpton Hotel Palomar" />
+            <div class="hotel-text" style="flex: 1">
+              <h3>Kimpton Hotel Palomar</h3>
+              <p>
+                The Kimpton Hotel Palomar is a boutique hotel known for its
+                stylish design and eco-friendly practices. Enjoy modern rooms, a
+                rooftop pool, and easy access to downtown attractions.
+              </p>
+              <div class="hotel-link"><a href="https://www.kimptonhotels.com">Book on website ❤</a>
+              </div>
+            </div>
+          </div>
+          <!-- Hotel 5 -->
+          <div class="hotel-container">
+            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/hilton-1.jpg?w=1024"
+              alt="Hilton Philadelphia" />
+            <div class="hotel-text" style="flex: 1">
+              <h3>
+                Hilton Philadelphia at Penn's Landing
+              </h3>
+              <p>
+                Situated along the waterfront, Hilton Philadelphia at Penn's
+                Landing provides stunning views of the Delaware River and the city
+                skyline. Guests can enjoy comfortable accommodations and easy
+                access to historical sites.
+              </p>
+              <div class="hotel-link"> <a
+                  href="https://www.hilton.com/en/hotels/phlplhh-hilton-philadelphia-at-penns-landing">Book on
+                  website ❤</a>
+              </div>
+            </div>
+          </div>
+          <!-- End hotel 5 section  -->
+        </div>
+        <!-- End hotels section -->
+      </div>
+      <!-- More info section -->
+      <div id='more-info' class="more-info-section">
+        <img style="max-width: 25rem;" src="images/rose.svg" alt="Rose image" />
+        <div class="spacer"></div>
+        <div class="gothic-font" style="font-size: 4rem">
+          More info coming soon...
+        </div>
+        <!-- End more info section -->
+      </div>
+    </div>
+    <!-- End black container -->
+  </div>
 </body>
 
 </html>
