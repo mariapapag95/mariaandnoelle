@@ -4,7 +4,7 @@
 <script>
 
   function checkPassword() {
-    const inputPassword = document.getElementById("password-input").value;
+    const inputPassword = document.getElementById("password-input").value.toLowerCase();
     const correctPasswords = ["palumbo", "margatina", "papageorgiou"]; // Set your password here
 
     if (correctPasswords.includes(inputPassword)) {
@@ -22,6 +22,7 @@
     if (event.key === "Enter") {
       checkPassword(); // Trigger the same action as the submit button
     }
+  }
 
 </script>
 
