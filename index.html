@@ -86,6 +86,10 @@
       color: black;
     }
 
+    .password-input-field:focus {
+      outline: none;
+    }
+
     .spacer {
       height: clamp(1rem, 4vw, 15rem);
     }
@@ -157,23 +161,23 @@
     .button:hover {
       color: rgb(255, 210, 225);
       border: 2px solid rgb(255, 210, 225);
+      background-color: transparent;
     }
 
     .submit-button {
-      filter: invert();
       padding: 0.5rem 2rem;
       margin: 0.5rem;
       background-color: transparent;
-      color: black;
-      border: 2px solid black;
+      color: white;
+      border: 2px solid white;
       border-radius: 8px;
       font-family: "Raleway";
       text-align: center;
     }
 
     .submit-button:hover {
-      color: rgb(255, 210, 225);
-      border: 2px solid rgb(255, 210, 225);
+      color: #871c2c;
+      border: 2px solid #871c2c;
       background-color: transparent;
     }
 
@@ -262,10 +266,10 @@
 <body>
   <div id="password-overlay" class="password-overlay">
     <div style="text-align: center; display:flex; flex-direction: column;">
-      <div class="got" style="font-size: 3rem;">Enter Password</div>
-      <input class="password-input-field" id="password-input" placeholder="Noelle or Maria's last name" />
+      <div class="gothic-font" style="font-size: 5rem;">Secret Code</div>
+      <input class="password-input-field" id="password-input" placeholder="Enter Noelle's or Maria's last name" />
 
-      <button class="submit-button" onclick="checkPassword()">Submit</button>
+      <div class="submit-button" onclick="checkPassword()">Submit</div>
       <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
     </div>
   </div>
@@ -347,8 +351,7 @@
         </div>
         <!-- Hotel 2 -->
         <div class="hotel-container">
-          <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/fishtown-1.jpg"
-            alt="Fishtown Hotel" />
+          <img src="images/annaandbel.jpg" alt="Anna and Bel" />
           <div class="hotel-text" style="flex: 1;">
             <h3>Anna and Bel</h3>
             <p>
@@ -362,7 +365,7 @@
           </div>
           <!-- Hotel 3 -->
           <div class="hotel-container">
-            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/logan.jpg" alt="The Logan" />
+            <img src="images/the logan.jpg" alt="The Logan" />
             <div class="hotel-text" style="flex: 1">
               <h3>The Logan Philadelphia</h3>
               <p>
@@ -376,8 +379,7 @@
           </div>
           <!-- Hotel 4 -->
           <div class="hotel-container">
-            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/kimpton-2.jpg"
-              alt="Kimpton Hotel Palomar" />
+            <img src="images/kimpton.jpeg" alt="Kimpton Hotel Palomar" />
             <div class="hotel-text" style="flex: 1">
               <h3>Kimpton Hotel Palomar</h3>
               <p>
@@ -393,8 +395,7 @@
           </div>
           <!-- Hotel 5 -->
           <div class="hotel-container">
-            <img src="https://mariaandnoelle.wordpress.com/wp-content/uploads/2024/09/hilton-1.jpg"
-              alt="Hilton Philadelphia" />
+            <img src="images/hiltonpennslanding.jpg" alt="Hilton Philadelphia" />
             <div class="hotel-text" style="flex: 1">
               <h3>
                 Hilton Philadelphia at Penn's Landing
