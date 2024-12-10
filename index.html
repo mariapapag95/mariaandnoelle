@@ -37,10 +37,18 @@
       font-style: normal;
     }
 
+    /* Define the CloisterBlack font */
+    @font-face {
+      font-family: 'CloisterBlack';
+      src: url('fonts/CloisterBlack.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
     /* Define the OldeEnglish font */
     @font-face {
       font-family: 'OldeEnglish';
-      src: url('fonts/CloisterBlack.ttf') format('truetype');
+      src: url('fonts/OldeEnglish.ttf') format('truetype');
       font-weight: normal;
       font-style: normal;
     }
@@ -96,8 +104,13 @@
       height: clamp(1rem, 4vw, 15rem);
     }
 
+    .title-gothic-font {
+      font-family: "CloisterBlack";
+      text-align: center;
+    }
+
     .gothic-font {
-      font-family: "OldeEnglish";
+      font-family: "CloisterBlack";
       text-align: center;
     }
 
@@ -272,11 +285,11 @@
 
   <div id="main-content" style="display:none">
     <div class="red-container">
-      <div class="gothic-font title">Maria & Noelle</div>
+      <div class="title-gothic-font title">Maria & Noelle</div>
       <div class="script-font subtitle">are getting married!</div>
       <div class="spacer"></div>
       <img src="images/cupid.svg" alt="Cupid image" />
-      <div class="gothic-font date-row">02
+      <div class="title-gothic-font date-row">02
         <div class="date-row-heart" style="padding: 1rem;">
           &#9829
         </div> 16
@@ -323,9 +336,9 @@
         <div style="text-align: center;">
           <div>Ladies, that means formal dresses, and winter colors.
             Even think pants or gowns, if you’d like.</div>
-  
+
           <div>Gentleman, that means tuxedos or dark colored suits.</div>
-  
+
           <div> We hope you have fun with it, we’re excited to see you!</div>
         </div>
         <div class="spacer"></div>
@@ -337,7 +350,8 @@
         <!-- Hotel section title -->
         <div>
           <h2 style="font-size: 3rem;" class="gothic-font">Spending the night?</h2>
-          <div style="text-align: center;">We are not blocking rooms at any specific hotel. Below are some options in the area. Please do not feel
+          <div style="text-align: center;">We are not blocking rooms at any specific hotel. Below are some options in
+            the area. Please do not feel
             limited to these options ♥</div>
           <div class="spacer"></div>
         </div>
