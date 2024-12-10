@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
+<script type="module">
+  import { passwords } from './passwords.js';
 
   function checkPassword() {
-    const inputPassword = document.getElementById("password-input").value.toLowerCase();
-    const correctPasswords = ["palumbo", "margatina", "papageorgiou"]; // Set your password here
+    const inputPassword = document.getElementById("password-input").value.toLowerCase().trim();
+    const correctPasswords = passwords; // Set your password here
 
     if (correctPasswords.includes(inputPassword)) {
       // If the password is correct, hide the overlay and show the content
@@ -305,7 +306,8 @@
             Registry
           </a>
           <!-- Attire Button -->
-          <a class="button" href="https://drive.google.com/file/d/1Kyknux9si7f1c87n4IhbWJQIpFfiSEtC/view?ts=674b1b9d" target="_blank" rel="noopener noreferrer">
+          <a class="button" href="https://drive.google.com/file/d/1Kyknux9si7f1c87n4IhbWJQIpFfiSEtC/view?ts=674b1b9d"
+            target="_blank" rel="noopener noreferrer">
             Attire
           </a>
           <!-- Info Button -->
@@ -331,15 +333,13 @@
         </div>
         <!-- Hotel 1 -->
         <div class="hotel-container">
-          <img src="images/divine-lorraine.png" alt="Mint House at the Lorraine" />
+          <img src="images/sonder.png" alt="Sonder The Heid" />
           <div class="hotel-text" style="flex: 1">
-            <h3> Mint House at the Lorraine</h3>
+            <h3> Sonder The Heid</h3>
             <p>
-              Mint House at the Lorraine offers fully furnished apartments with
-              modern amenities, perfect for both short and extended stays. This hotel is right across the street from
-              our venue, so it is the closest option.
-              Located near cultural attractions, guests enjoy a home-like
-              atmosphere with easy access to the city.
+              Sonder The Heid in Philadelphia's Callowhill district offers stylish, loft-style apartments with modern
+              amenities like full kitchens, in-unit laundry, and a rooftop lounge. Just a short walk from our venue, as
+              well as other Philly attractions, such as Reading Terminal Market and the Convention Center.
             </p>
             <div class="hotel-link"><a target="_blank"
                 href="https://minthouse.com/?gad_source=1&gclid=Cj0KCQiA88a5BhDPARIsAFj595iKXGmN0ocmmMor7XoYcdemWfon3yIY565sOHWFIVxlnXWgE80rP0saAu8sEALw_wcB">Book
