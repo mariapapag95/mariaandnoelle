@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script type="module">
-  import { passwords } from './passwords.js';
+<script>
 
   function checkPassword() {
     const inputPassword = document.getElementById("password-input").value.toLowerCase().trim();
-    const correctPasswords = passwords; // Set your password here
+    const correctPasswords = ["palumbo", "margatina", "papageorgiou"]; // 
+    
+    console.log('checking password 😩')
 
     if (correctPasswords.includes(inputPassword)) {
       // If the password is correct, hide the overlay and show the content
