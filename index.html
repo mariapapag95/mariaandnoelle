@@ -6,7 +6,7 @@
   function checkPassword() {
     const inputPassword = document.getElementById("password-input").value.toLowerCase().trim();
     const correctPasswords = ["palumbo", "margatina", "papageorgiou"]; // 
-    
+
     console.log('checking password 😩')
 
     if (correctPasswords.includes(inputPassword)) {
@@ -276,7 +276,7 @@
     </div>
   </div>
 
-  <div id="main-content" style="display: none;">
+  <div id="main-content" style="display:none">
     <div class="red-container">
       <div class="gothic-font title">Maria & Noelle</div>
       <div class="script-font subtitle">are getting married!</div>
@@ -322,12 +322,25 @@
     <!-- End red-container -->
 
     <div class="black-container">
+      <!-- Dress code section-->
+      <div>
+        <div class="spacer"></div>
+        <h2 class="gothic-font" style="font-size: 3rem;">Dress code: Black-tie optional</h2>
+        <p>Ladies, that means formal dresses, and winter colors.
+          Even think pants or gowns, if you’d like.</p>
+
+        <p>Gentleman, that means tuxedos or dark colored suits.</p>
+
+        <p> We hope you have fun with it, we’re excited to see you!</p>
+        <div class="spacer"></div>
+      </div>
+
       <!-- Hotels Section -->
       <div id="hotels">
         <div class="spacer"></div>
         <!-- Hotel section title -->
         <div class="hotel-section-title">
-          <h2>Spending the night?</h2>
+          <h2 style="font-size: 3rem;" class="gothic-font">Spending the night?</h2>
           <p>We are not blocking rooms at any specific hotel. Below are some options in the area. Please do not feel
             limited to these options ♥</p>
           <div class="spacer"></div>
